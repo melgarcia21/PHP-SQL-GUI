@@ -3,64 +3,64 @@
 jsPlumb.ready(function () {
     // Suppliers to Ingredients
     jsPlumb.connect({
-        source: "suppliers",
-        target: "ingredients",
+        source: "supplier_tbl", 
+        target: "ingredient_tbl", 
         anchors: ["Right", "Left"],
         endpoint: "Rectangle"
     });
 
     // Ingredients to Items
     jsPlumb.connect({
-        source: "ingredients",
-        target: "items",
+        source: "ingredients_tbl",
+        target: "item_tbl",
         anchors: ["Right", "Left"],
         endpoint: "Rectangle"
     });
 
     // Items to Meals
     jsPlumb.connect({
-        source: "items",
-        target: "meals",
+        source: "item_tbl",
+        target: "meals_tbl",
         anchors: ["Right", "Left"],
         endpoint: "Rectangle"
     });
 
     // Meals to Menuitems
     jsPlumb.connect({
-        source: "meals",
-        target: "menuitems",
+        source: "meals_tbl",
+        target: "menuitems_tbl",
         anchors: ["Right", "Left"],
         endpoint: "Rectangle"
     });
 
     // Items to MadeWith (many-to-many relationship)
     jsPlumb.connect({
-        source: "items",
-        target: "madewith",
+        source: "items_tbl",
+        target: "madewith_tbl",
         anchors: ["Right", "Left"],
         endpoint: "Rectangle"
     });
 
     // MadeWith to Ingredients
     jsPlumb.connect({
-        source: "madewith",
-        target: "ingredients",
+        source: "madewith_tbl",
+        target: "ingredients_tbl",
         anchors: ["Right", "Left"],
         endpoint: "Rectangle"
     });
 
     // PartOf to Meals
     jsPlumb.connect({
-        source: "partof",
-        target: "meals",
+        source: "partof_tbl",
+        target: "meals_tbl",
         anchors: ["Right", "Left"],
         endpoint: "Rectangle"
     });
 
     // PartOf to Items
     jsPlumb.connect({
-        source: "partof",
-        target: "items",
+        source: "partof_tbl",
+        target: "item_tbl",
         anchors: ["Right", "Left"],
         endpoint: "Rectangle"
     });

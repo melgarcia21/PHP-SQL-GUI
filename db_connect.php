@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "restaurant";
+$dbname = "addbase_lab1";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
